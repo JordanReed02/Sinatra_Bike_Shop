@@ -4,14 +4,22 @@
     <h1><%= "#{@project.title} - $#{@project.budget}" %></h1>
 <ul>
   <% @project.parts.each do |part| %>
-    <li><%= "#{part.name} - #{part.price}" %></li>
+    <li><%= "#{part.name} - #{part.price}" %>
+      <span>
+        <form action="/projects/<%=@project.id %>/parts/<%=part.id %>/delete" method="post">
+          <input type="hidden" id="hidden" name="_method" value="delete">
+          <input type="submit" class="btn btn-danger" value="Delete Part">
+        </form>
+      </span>
+    </li>
   <% end %>
 </ul>
+<button class="btn btn-default"><a href="/projects/<%= @project.id %>/parts/new">Add A New Part</a></button>
 <button class="btn btn-default"><a href="/projects/<%= @project.id %>/edit">Edit Project</a></button>
 
-<form action="/projects/<%=@project.id %>/delete" method="POST">
-  <input type="hidden" id="hidden" name="_method" value="DELETE">
-  <input type="submit" class="btn btn-danger" value="Delete Project">
+<form action="/projects/<%=@project.id %>/delete" method="post">
+  <input type="hidden" id="hidden" name="_method" value="delete">
+  <input type="submit" class="btn btn-danger" value="delete project">
 </form>
 </div>
 </section>
