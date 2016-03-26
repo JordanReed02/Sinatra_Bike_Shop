@@ -1,0 +1,17 @@
+<%= erb(:nav) %>
+<section class="intro-section">
+  <div class="container">
+    <h1><%= "#{@project.title} - $#{@project.budget}" %></h1>
+<ul>
+  <% @project.parts.each do |part| %>
+    <li><%= "#{part.name} - #{part.price}" %></li>
+  <% end %>
+</ul>
+<button class="btn btn-default"><a href="/projects/<%= @project.id %>/edit">Edit Project</a></button>
+
+<form action="/projects/<%=@project.id %>/delete" method="POST">
+  <input type="hidden" id="hidden" name="_method" value="DELETE">
+  <input type="submit" class="btn btn-danger" value="Delete Project">
+</form>
+</div>
+</section>

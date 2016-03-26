@@ -1,0 +1,13 @@
+<%= erb :nav %>
+<section class="intro-section">
+  <div class="container">
+<h3>Create A New Bike Project</h3>
+<form action="/projects" method="POST">
+  <input type="text" class="form-control" name="title" placeholder="Title">
+  <input type="text" class="form-control" name="budget" placeholder="Budget">
+  <br><br>
+  <input type="submit" class="btn btn-primary" value="submit">
+</form>
+
+  </div>
+</section>
