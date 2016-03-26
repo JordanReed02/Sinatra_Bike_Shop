@@ -36,7 +36,7 @@ of those sections to manage the look and feel of the site. */
     padding-top: 150px;
     text-align: center;
     color: white;
-    background: url(../images/purple_bike.png);
+    background: url(../images/main-photo.png);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -45,14 +45,20 @@ of those sections to manage the look and feel of the site. */
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #eee;
+    color: white;
+    background: url(../images/parts.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .services-section {
     height: 100%;
     padding-top: 150px;
     text-align: center;
-    background: #fff;
+    color: white;
+    background: url(../images/services.png);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .contact-section {
