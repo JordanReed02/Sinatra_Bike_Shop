@@ -5,7 +5,7 @@ class PartsController < ApplicationController
       @project = Project.find(params[:id])
       erb :'parts/new'
     else
-      erb :login, locals: {message: "You don't have access, please login"}
+      erb :'users/login', locals: {message: "You don't have access, please login"}
     end
   end
 
@@ -34,7 +34,7 @@ class PartsController < ApplicationController
         redirect to "/projects/#{@project.id}"
       end
     else
-      erb :login, locals: {message: "You don't have access, please login"}
+      erb :'users/login', locals: {message: "You don't have access, please login"}
     end
   end
 

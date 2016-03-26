@@ -12,7 +12,7 @@ class ProjectsController < ApplicationController
     if logged_in?
       erb :'projects/new'
     else
-      erb :login, locals: {message: "You don't have access, please login"}
+      erb :'users/login', locals: {message: "You don't have access, please login"}
     end
   end
 
@@ -31,7 +31,7 @@ class ProjectsController < ApplicationController
       @project = Project.find(params[:id])
       erb :'projects/show'
     else 
-      erb :login, locals: {message: "You don't have access, please login"}
+      erb :'users/login', locals: {message: "You don't have access, please login"}
     end
   end
 
@@ -44,7 +44,7 @@ class ProjectsController < ApplicationController
       erb :projects, locals: {message: "You don't have access to edit this project"}
       end
     else
-      erb :login, locals: {message: "You don't have access, please login"}
+      erb :'users/login', locals: {message: "You don't have access, please login"}
     end
   end
 

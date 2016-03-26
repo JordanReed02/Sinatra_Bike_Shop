@@ -3,7 +3,7 @@
   <div class="container">
     <h1>All Projects</h1>
     <% @projects.each do |project| %>
-      <h2><%= project.title %></h2>
+      <h2><a href="/projects/<%= project.id %>"><%= project.title %></a></h2>
     <% end %>
 <button class="btn btn-default"><a href="/projects/new">Create A New Project</a></button>
 
