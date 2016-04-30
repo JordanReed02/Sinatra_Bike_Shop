@@ -1,10 +1,11 @@
 <%= erb :nav %>
 <section class="intro-section">
   <div class="container">
-    <h1><%= "#{@project.title} - $#{@project.budget}" %></h1>
+    <h1><%= @project.title %></h1>
+    <h1>Budget: $<%= @project.budget %></h1>
 <ul>
   <% @project.parts.each do |part| %>
-    <li><%= "#{part.name} - #{part.price}" %>
+    <li><%= "#{part.name} - $#{part.price}" %>
       <span>
         <form action="/projects/<%=@project.id %>/parts/<%=part.id %>/delete" method="post">
           <input type="hidden" id="hidden" name="_method" value="delete">

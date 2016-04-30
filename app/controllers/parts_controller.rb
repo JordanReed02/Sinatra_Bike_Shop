@@ -1,4 +1,3 @@
-require 'pry'
 class PartsController < ApplicationController
   get '/projects/:id/parts/new' do
     if logged_in?
@@ -11,7 +10,8 @@ class PartsController < ApplicationController
 
   post '/projects/:id' do
     if params.values.any? {|value| value == ""}
-      redirect to "/projects/#{params[:id]}/parts/new"
+      @project = Project.find(params[:id])
+      erb :'parts/new', locals: {message: "You are missing information!"}
     else
       @project = Project.find(params[:id])
       @part = Part.new(name: params[:name], price: params[:price])

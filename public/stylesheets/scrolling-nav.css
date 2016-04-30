@@ -37,7 +37,7 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     color: white;
     background: url(../images/main-photo.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -47,7 +47,7 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     color: white;
     background: url(../images/parts.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 
@@ -57,7 +57,7 @@ of those sections to manage the look and feel of the site. */
     text-align: center;
     color: white;
     background: url(../images/services.png);
-    background-size: cover;
+    background-size: 100%;
     background-repeat: no-repeat;
 }
 

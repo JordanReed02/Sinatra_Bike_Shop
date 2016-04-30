@@ -41,7 +41,7 @@ class ProjectsController < ApplicationController
       if @project.user_id == session[:user_id]
        erb :'projects/edit'
       else
-      erb :projects, locals: {message: "You don't have access to edit this project"}
+      erb :'projects', locals: {message: "You don't have access to edit this project"}
       end
     else
       erb :'users/login', locals: {message: "You don't have access, please login"}

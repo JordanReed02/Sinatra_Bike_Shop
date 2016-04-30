@@ -15,7 +15,7 @@ ActiveRecord::Schema.define(version: 20160323031552) do
 
   create_table "parts", force: :cascade do |t|
     t.string  "name"
-    t.string  "price"
+    t.integer "price"
     t.integer "project_id"
   end
 
