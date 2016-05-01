@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect to '/projects'
     else
-      erb :'users/login', locals: {message: "You credentials are incorrect!"}
+      erb :'users/login', locals: {message: "Your credentials are incorrect!"}
     end
   end
 

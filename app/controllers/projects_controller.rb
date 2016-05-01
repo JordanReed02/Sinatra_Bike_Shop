@@ -50,6 +50,8 @@ class ProjectsController < ApplicationController
 
   patch '/projects/:id' do 
     if params.values.any? {|value| value == ""}
+      @project = Project.find(params[:id])
+      erb :'projects/edit', locals: {message: "You're missing information"}
       redirect to "/projects/#{params[:id]}/edit"
     else
       @project = Project.find(params[:id])
