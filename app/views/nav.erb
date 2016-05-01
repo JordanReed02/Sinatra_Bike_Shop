@@ -8,7 +8,11 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/projects">The Bike Shop</a>
+            <% if logged_in? %>
+              <a class="navbar-brand page-scroll" href="/projects">The Bike Shop</a>
+            <% else %>
+              <a class="navbar-brand page-scroll" href="/">The Bike Shop</a>
+            <% end %>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
